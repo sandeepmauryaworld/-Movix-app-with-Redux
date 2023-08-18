@@ -4,6 +4,7 @@ import axios from "axios";
 import "../style.scss";
 import SwitchTabs from "../../../components/SwitchTabs/SwitchTabs";
 import useFetch from "../../../hooks/useFetch";
+import Carousel from "../../../components/carousel/Carousel";
 const Trending = () => {
   const [endpoint, setEndpoint] = useState("day");
 
@@ -19,6 +20,7 @@ const Trending = () => {
         <span className="carouselTitle">Trending</span>
         <SwitchTabs data={["Day", "Week"]} onTabChang={onTabChange} />
       </ContentWrapper>
+      <Carousel data={data?.results} loading={loading} />
     </div>
   );
 };
