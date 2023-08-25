@@ -5,7 +5,8 @@ import useFetch from "../../../hooks/useFetch";
 import { useSelector } from "react-redux";
 
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
-import Img from "../../../components/LazyLoadImage/img";
+// import Img from "../../../components/LazyLoadImage/img";
+import Img from "../../../components/LazyLoadImage/Img";
 const HeroBanner = () => {
   // for background img chnge on every refresh  for hero banner
   const [background, setBackground] = useState("");
