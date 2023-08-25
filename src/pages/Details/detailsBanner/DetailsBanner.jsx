@@ -11,8 +11,8 @@ import Genres from "../../../components/genres/Genres";
 import CircleRating from "../../../components/circleRating/CircleRating";
 import Img from "../../../components/lazyLoadImage/Img.jsx";
 import PosterFallback from "../../../assets/no-poster.png";
-import { PlayIcon } from "../PlayBtn";
-import VideoPopup from "../../../components/VideoPopup/VideoPopup";
+import { PlayIcon } from "../Playbtn";
+import VideoPopup from "../../../components/videoPopup/VideoPopup";
 
 const DetailsBanner = ({ video, crew }) => {
   const [show, setShow] = useState(false);
@@ -26,7 +26,6 @@ const DetailsBanner = ({ video, crew }) => {
   const _genres = data?.genres?.map((g) => g.id);
 
   const director = crew?.filter((f) => f.job === "Director");
-
   const writer = crew?.filter(
     (f) => f.job === "Screenplay" || f.job === "Story" || f.job === "Writer"
   );
@@ -120,7 +119,7 @@ const DetailsBanner = ({ video, crew }) => {
                           {director?.map((d, i) => (
                             <span key={i}>
                               {d.name}
-                              {director?.length - 1 !== i && ", "}
+                              {director.length - 1 !== i && ", "}
                             </span>
                           ))}
                         </span>
